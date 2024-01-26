@@ -76,7 +76,7 @@ li::before {
 
 /* Element separation */
 li + li {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(109, 74, 74, 0.2);
 }
 ul li.checked::before {
   content: '';
