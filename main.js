@@ -12,23 +12,18 @@ form.addEventListener("submit", (event) => {
 
 // marking it as complete
 const ul = document.getElementById("list_tasks");
+let counter = 0;
 let complete = ul.addEventListener("click", function (e) {
     e.target.classList.toggle("checked");
     console.log('task complete!')
+    counter++;
+    console.log({counter})
+    if (counter === 3) {
+        alert('Hey! You did so much already. Remember to take a break!');
+        counter = 0;
+    }
 });
 
 //if three tasks are completed, send alert to user to take break
-// function threeTimes() = {
-//     if (complete) {
-//         let counter = 0;
-//         counter++;
-//         console.log({ counter })
+//how to get something to happen based on interaction with dom
 
-//         if (counter === 3) {
-//             alert("Hey! You did so much today. Remember to take a break!")
-//             counter = 0;
-//         }
-//     }
-// }
-
-// threeTimes();
