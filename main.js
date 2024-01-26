@@ -1,6 +1,34 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2759
-\cocoatextscaling0\cocoaplatform0{\fonttbl}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-}
+// submitting it
+form = document.forms.list;
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    list_item = document.getElementById("list_tasks");
+    let list = document.createElement("li");
+    let listcontent = document.createTextNode(form.task.value);
+    list.appendChild(listcontent);
+    list_item.appendChild(list);
+    form.task.value = "";
+});
+
+// marking it as complete
+const ul = document.getElementById("list_tasks");
+let complete = ul.addEventListener("click", function (e) {
+    e.target.classList.toggle("checked");
+    console.log('task complete!')
+});
+
+//if three tasks are completed, send alert to user to take break
+// function threeTimes() = {
+//     if (complete) {
+//         let counter = 0;
+//         counter++;
+//         console.log({ counter })
+
+//         if (counter === 3) {
+//             alert("Hey! You did so much today. Remember to take a break!")
+//             counter = 0;
+//         }
+//     }
+// }
+
+// threeTimes();
